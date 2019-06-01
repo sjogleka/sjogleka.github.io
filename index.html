@@ -24,15 +24,6 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
 <!-- /STYLES -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140777959-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-140777959-1');
-</script>
 
 </head>
 
@@ -174,7 +165,7 @@
 									<div class="rightbox">
 										<div class="definition">
 											<p>Hi! My name is <strong>Sumedh Joglekar</strong>. Incoming intern at <strong>Spectrum</strong>. Data Enthusiast, Software engineer and Graduate Student at University of North Carolina at Charlotte. I have completed my bachelors in Electronics Engineering with Honors in Embedded System Design. Along with the academics, I have also worked as a ‘Publicity Manager’ during college events.
-											<br>Quantitative aptitude, analytical ability and the knowledge of programming languages learned, helped me to get a job as Software Engineer at <b>Accenture Solution Pvt Ltd.</b>. While working at Accenture,I got opportunity to work on different automation tools and have implemented muliple CI/CD automation pipeline using agile methodology.I have also worked as Graduate Teaching Assistant at UNCC for <b>Computer Vision</b> course which helped me to deppen my knowledge in the field of Image Processing and Machine Learning.
+											<br>Quantitative aptitude, analytical ability and the knowledge of programming languages learned, helped me to get a job as Software Engineer at <b>Accenture Solution Pvt Ltd.</b>. While working at Accenture,I got opportunity to work on different automation tools and have implemented muliple CI/CD automation pipeline using agile methodology.I have also worked as Graduate Teaching Assistant at UNCC for <b>Computer Vision</b> course which helped me to deepen my knowledge in the field of Image Processing and Machine Learning.
 											<br>In upcoimng years, I wish to work in an area that is a combination of <strong>Machine Learning, Data Analytics/Science,DevOps , and Software Engineering</strong>. Having grasped the knowledge of different technology, now I want to apply it towards the right direction in order to make everyday life more hassle-less.</p>
 										</div>
 										<div class="about_short_contact_wrap">
@@ -410,7 +401,7 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="timeline">
-            <li >
+            <li class="timeline-inverted">
               <div class="timeline-image" style = "margin-top: 40px">
                 
                 <img class="img-circle img-responsive" src="img/workex/spectrum_charter.png" alt="">
@@ -752,29 +743,33 @@
 											<li><p><label>Address:</label><span>516C Barton Creek Dr, Charlotte, NC-28262</span></p></li>
 											<li><p><label>Email:</label><span><a href="mailto:sjogleka@uncc.edu">sjogleka@uncc.edu</a></span></p></li>
 											<li><p><label>Phone:</label><span>+1-704-957-3530</span></p></li>
-											<li><p><label>Website:</label><span><a href="mailto:example@gmail.com">Website</a></span></p></li>
+											<li><p><label>Website:</label><span><a href="https://sjogleka.github.io">sjogleka.github.io</a></span></p></li>
 										</ul>
 									</div>
 								</div>
 								<div class="rightbox">
 									<div class="arlo_tm_contact_wrap">
 										<div class="main_input_wrap">
-											<form action="http://frenify.com/" method="post" class="contact_form" id="contact_form">
+											<form class="contact__form"  method="post" action="test.php">
+
 												<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
 												<div class="empty_notice"><span>Please Fill Required Fields</span></div>
 												<div class="wrap">
-													<input id="name" type="text" placeholder="Your Name">
+													<input id="name" type="text" placeholder="Your Name" required>
 												</div>
 												<div class="wrap">
-													<input id="email" type="text" placeholder="Your Email">
+													<input id="email" type="text" placeholder="Your Email" required>
 												</div>
 												<div class="wrap">
-													<textarea id="message" placeholder="Your Message"></textarea>
+													<textarea id="message" placeholder="Your Message" required></textarea>
 												</div>
-												<div class="arlo_tm_button">
-													<a id="send_message" href="#"><span>Send Message</span></a>
-												</div>
-											</form>
+											<div class="arlo_tm_button">
+                                        	<input name="submit"  style="background-color: #E3872D;    font-weight: 600;    font-family: Montserrat;
+    										padding: 12px 35px; border-radius: 3px;"type="submit" class="btn btn-success" value="Send Message">
+                                    		</div>
+													
+                                <!-- end form element -->
+                            </form>
 										</div>
 									</div>
 								</div>

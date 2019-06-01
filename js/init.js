@@ -297,7 +297,7 @@ function arlo_tm_anchor(){
 // -----------------------------------------------------
 // ----------------    CONTACT FORM    -----------------
 // -----------------------------------------------------
-
+/*
 function arlo_tm_contact_form(){
 	
 	"use strict";
@@ -318,11 +318,11 @@ function arlo_tm_contact_form(){
 		}
 		else{
 			// Returns successful data submission message when the entered information is stored in database.
-			jQuery.post("modal/contact.php",{ ajax_name: name, ajax_email: email, ajax_message:message, ajax_subject: subject}, function(data) {
+			jQuery.post("test.php",{ ajax_name: name, ajax_email: email, ajax_message:message, ajax_subject: subject}, function(data) {
 				
 				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
 				
-				
+				console.log(ajax_name, ajax_email);
 				if(jQuery(".contact_form .returnmessage span.contact_error").length){
 					jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);		
 				}else{
@@ -339,6 +339,7 @@ function arlo_tm_contact_form(){
 		return false; 
 	});
 }
+*/
 
 // -----------------------------------------------------
 // --------------------    OWL CAROUSEL    -------------
@@ -755,3 +756,45 @@ function arlo_tm_hamburger(){
 		return false;
 	});
 }
+
+
+function arlo_tm_contact_form() {
+    'use strict';
+
+    var form = $('.contact__form'),
+        message = $('.contact__msg'),
+        form_data;
+
+
+    // Success function
+    function done_func(response) {
+        message.fadeIn().removeClass('alert-danger').addClass('alert-success');
+        message.text(response);
+        setTimeout(function () {
+            message.fadeOut();
+        }, 2000);
+        form.find('input:not([type="submit"]), textarea').val('');
+    }
+
+    // fail function
+    function fail_func(data) {
+        message.fadeIn().removeClass('alert-success').addClass('alert-success');
+        message.text(data.responseText);
+        setTimeout(function () {
+            message.fadeOut();
+        }, 2000);
+    }
+    
+    form.submit(function (e) {
+        e.preventDefault();
+        form_data = $(this).serialize();
+        $.ajax({
+            type: 'POST',
+            url: form.attr('action'),
+            data: form_data
+        })
+        .done(done_func)
+        .fail(fail_func);
+    });
+    
+}(jQuery);
